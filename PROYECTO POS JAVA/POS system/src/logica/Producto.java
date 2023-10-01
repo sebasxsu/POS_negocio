@@ -1,40 +1,42 @@
-package logica;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Producto {
+    private int id;
+    private int tipo;
     private String nombre;
-    private double precio;
-    private List<String> ingredientes;
+    private double precioCompra;
+    private double precioVenta;
+    private int cantidad;
 
-    public Producto(String nombre, double precio, List<String> ingredientes) {
+    public Producto(int id, int tipo, String nombre, double precioCompra, double precioVenta, int cantidad) {
+        this.id = id;
+        this.tipo = tipo;
         this.nombre = nombre;
-        this.precio = precio;
-        this.ingredientes = new ArrayList<>(ingredientes);
+        this.precioCompra = precioCompra;
+        this.precioVenta = precioVenta;
+        this.cantidad = cantidad;
+    }
+
+    // getters y setters
+    public int getId() {
+        return id;
+    }
+
+    public int getTipo() {
+        return tipo;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public double getPrecioCompra() {
+        return precioCompra;
     }
 
-    public double getPrecio() {
-        return precio;
+    public double getPrecioVenta() {
+        return precioVenta;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public List<String> getIngredientes() {
-        return new ArrayList<>(ingredientes);
-    }
-
-    public void setIngredientes(List<String> ingredientes) {
-        this.ingredientes = new ArrayList<>(ingredientes);
+    public int getCantidad() {
+        return cantidad;
     }
 }
