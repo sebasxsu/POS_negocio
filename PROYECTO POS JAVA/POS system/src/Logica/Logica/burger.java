@@ -1,4 +1,4 @@
-package logica;
+package Logica;
 
 import java.util.ArrayList;
 import java.util.Date;
